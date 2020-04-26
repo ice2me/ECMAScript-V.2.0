@@ -20,7 +20,7 @@ let ar2 = ['two', true, '1455', 'yellow', false, 28, 'new', 99];
 function f2() {
 	let out = '';
 	for (let i = 0; i < ar2.length; i++) {
-		out += ar2[i]+' ';
+		out += ar2[i] + ' ';
 	}
 	document.querySelector('.out-2').innerHTML = out;
 }
@@ -214,10 +214,14 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
+	let p = ' ';
 	let two = ar12[0];
 	ar12[0] = ar12 [ar12.length - 1];
-	ar12[ar12.length - 1] = two;
-	document.querySelector('.out-12').innerHTML = ar12;
+	ar12[ar12.length - 1] = two ;
+	for (let i = 0; i < ar12.length; i++) {
+		p += ar12[i] + ' ';
+	}
+	document.querySelector('.out-12').innerHTML = p;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -327,10 +331,10 @@ function f17() {
 	let t = '';
 	for (let i = 0; i < ar17.length; i++) {
 		if (ar17[i] > 3) {
-			t += ar17[i]+' ';
+			t += ar17[i];
 		}
 	}
-	out.innerHTML = t;
+	out.innerHTML = t.length;
 }
 
 document.querySelector('.b-17').onclick = f17;
