@@ -240,22 +240,29 @@ let a13 = [];
 
 function f13() {
 	let out = document.querySelector('.out-13');
-	for (let i = 0; i < 8; i++) {
-		a13.push([]);
-		
-		for (let r = 0; r < 4; r++) {
-			if (i % 2 == 0) {
-				a13[i].push(0,1);
-			} else {
-				a13[i].push(1,0);
-			}
-		}
-	}
+    let t = [];
+
+    for(let i = 0; i < 8; i++) {
+        if(i % 2 === 0) {
+            t.push(0);
+        } else {
+            t.push(1);
+        }
+    }
+    let rev = t.concat().reverse();
+    for(let i = 0; i < 8; i++) {
+        if(i % 2 === 0) {
+            a13.push(t);
+        } else {
+            a13.push(rev);
+        }
+    }
 	console.log(a13);
 	out.innerHTML = a13;
 }
 
 document.querySelector('.b-13').onclick = f13;
+
 
 // Task 14
 // При нажатии b-14 выполняете функцию f14. Функция должна вывести в out-14 длины вложенных в a14 массивов. Через пробел.

@@ -2,11 +2,11 @@
 // Есть массив d1, кнопка b-1, input i-1. Напишите функцию f1, которая при нажатии читает i-1 и добавляем его в массив. После чего выводит массив в .out-1. Поскольку мы будем выводить массив d1 неоднократно, то давайте вывод массива сделаем отдельной функцией, showArr - она подготовлена. Изучите ее - это хороший способ оптимизировать код.
 
 function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
+	let out = '';
+	for (let i = 0; i < arr.length; i++) {
+		out += arr[i] + ' ';
+	}
+	document.querySelector(domElem).innerHTML = out;
 }
 
 let d1 = [33, 'best', 66, 'best'];
@@ -117,7 +117,7 @@ function f8() {
 		newM[i + 1] = d8[i];
 	}
 	d8 = newM;
-    showArr('.out-8', d8);
+	showArr('.out-8', d8);
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -136,7 +136,7 @@ function f9() {
 		newM[i - 1] = d9[i];
 	}
 	d9 = newM;
-    showArr('.out-9', d9);
+	showArr('.out-9', d9);
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -151,7 +151,7 @@ let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
 	d10.reverse();
-    showArr('.out-10', d10);
+	showArr('.out-10', d10);
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -219,7 +219,7 @@ function f13() {
 		t.push(d13[i]);
 	}
 	d13 = t;
-    showArr('.out-13', d13);
+	showArr('.out-13', d13);
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -239,7 +239,7 @@ function f14() {
 		d14[i] = 1;
 	}
 	
-    showArr('.out-14', d14);
+	showArr('.out-14', d14);
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -258,7 +258,7 @@ function f15() {
 	if (e == -1) {
 		d15.push(inp);
 	}
-    showArr('.out-15', d15);
+	showArr('.out-15', d15);
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -275,7 +275,7 @@ let d162 = [23, 24, 56, 87];
 
 function f16() {
 	d16 = d161.concat(d162);
-    showArr('.out-16', d16);
+	showArr('.out-16', d16);
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -298,7 +298,7 @@ function f17() {
 	for (let k = 0; k < d172.length; k++){
 		d17.push(d172[k]);
 	}
-    showArr('.out-17', d17);
+	showArr('.out-17', d17);
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -330,20 +330,23 @@ document.querySelector('.b-18').onclick = f18;
 let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
 let maxString = '';
 
+
 function f19() {
 	let out = document.querySelector('.out-19');
-	let s = d19[0].length;
-	maxString = d19[s];
-	
-	for (let i = 0; i < d19.length; i++){
-		if (d19[i] > s) {
-			s = d19[i].length;
+	let max = d19[0].length;
+	let temp = d19[0];
+	for (let i = 0; i < d19.length; i++) {
+		if (d19[i].length > max) {
+			max = d19[i].length;
+			temp = d19[i];
 		}
+		
 	}
-	out.innerHTML = maxString;
+	out.innerHTML = temp;
 }
 
 document.querySelector('.b-19').onclick = f19;
+
 
 // Task 20
 // Напишите функцию f20, которая применяет к массиву d20 метод join с параметрами и соединяет элементы массива в одну строку. Результат выводит в .out-20. В качестве разделителя укажите два апострофа без пробела.
@@ -355,7 +358,7 @@ let d20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
 	let out = document.querySelector('.out-20');
-	out.innerHTML = d20.join("''");
+	out.innerHTML = d20.join('');
 }
 
 document.querySelector('.b-20').onclick = f20;
