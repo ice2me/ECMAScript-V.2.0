@@ -432,12 +432,19 @@ function f18() {
 	let inp = document.querySelector('.i-18').value;
 	let out = document.querySelector('.out-18');
 	let m = '';
-	for (let i = 0; i < a18[inp].length; i++){
-		m += a18[inp][i] + ' ';
+
+	for ( let key in a18){
+		for (let i = 0; i < a18[key].length; i++){
+			if (a18[key] == a18[inp]) {
+				m += a18[inp][i] + ' ';
+				console.log(a18[inp][i]);
+			}
+		}
 	}
 	out.innerHTML = m;
 }
 document.querySelector('.b-18').onclick = f18;
+
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
 // Пользователь ввел Lisova - вывод red, ввел Obolon - вывод blue.
