@@ -195,13 +195,9 @@ let a9 = {
 function f9() {
 	let inp = +document.querySelector('.i-9').value;
 	let out = document.querySelector('.out-9');
-	let m = '';
 	for (let key in a9){
 		if( inp == a9[key]){
 			out.innerHTML += key + ' ';
-		}
-		else{
-			out.innerHTML += m;
 		}
 	}
 }
@@ -412,7 +408,7 @@ function f17() {
 	let m = '';
 
 	for ( let key in a17){
-		if (a17[key]['age'] > 30) m = a16[key]['age'];
+		if (a17[key]['age'] > 30) m = a16[key]['name'];
 	}
 	out.innerHTML = m;
 }

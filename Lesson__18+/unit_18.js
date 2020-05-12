@@ -74,8 +74,6 @@ document.querySelectorAll('.task-5').forEach(elem => {
 	elem.onclick = t5;
 });
 
-
-
 // Task 6 ============================================
 /*  Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. Выведите на страницу. Запускаться решение должно при вызове функции t6. */
 
@@ -136,12 +134,12 @@ document.querySelector('.b-9').onclick = t9;
 /*  Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в GET строку (GET параметры). Найдите описание что такое GET строка самостоятельно. Разделитель - амперсанд. Результат присвойте a10_res. Запускаться решение должно при вызове функции t10. Допускается лишний амперсанд в конце строки!!! */
 
 function t10() {
-	let a10 = { name: "ivan", age: 15, sex: 1, id: 45 };
-	let a10_res = '';
-	for (let key in a10) {
+    let a10 = { name: "ivan", age: 15, sex: 1, id: 45 };
+    let a10_res = '';
+    for (let key in a10) {
 
-		a10_res += key + "=" + a10[key] + "&";
-		document.querySelector('.out-10').innerHTML = a10_res;
-	}
+        a10_res += key + "=" + a10[key] + "&";
+        document.querySelector('.out-10').innerHTML = a10_res;
+    }
 }
 document.querySelector('.b-10').onclick = t10;
